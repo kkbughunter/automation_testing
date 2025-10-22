@@ -1,0 +1,16 @@
+[
+  {
+    "testName": "Login Success_1",
+    "status": "PASS",
+    "url": "https://devnadal.in.net/nadalbgv/Admin/index.php",
+    "expectedText": "Clientele",
+    "timestamp": "2025-10-21T07:36:22.321Z"
+  },
+  {
+    "testName": "Administration Menu_2",
+    "status": "PASS",
+    "url": "https://devnadal.in.net/nadalbgv/Admin/index.php",
+    "expectedText": "Clientele",
+    "timestamp": "2025-10-21T07:36:35.836Z"
+  }
+]

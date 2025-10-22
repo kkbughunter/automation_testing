@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Login Test",
+      "url": "https://devnadal.in.net/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "NadalVerify"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "NadalService@123"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        }
+      ],
+      "expectedElement": "span.nav-profile-name",
+      "expectedText": "Logged in as Nadal Business Services",
+      "expectedUrlContains": "/Admin/index.php",
+      "screenshotPath": ""
+    }
+  ]
+}

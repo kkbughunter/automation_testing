@@ -1,0 +1,21 @@
+{
+  "name": "text-select-automation-testing",
+  "version": "1.0.0",
+  "description": "Comprehensive text selection automation testing framework",
+  "main": "learning/text_select_automation_testing.js",
+  "scripts": {
+    "test": "node learning/text_select_automation_testing.js",
+    "install-deps": "npm install puppeteer"
+  },
+  "dependencies": {
+    "puppeteer": "^21.11.0"
+  },
+  "keywords": [
+    "automation",
+    "testing",
+    "puppeteer",
+    "text-selection"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
