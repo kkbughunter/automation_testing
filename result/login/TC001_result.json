@@ -1,0 +1,12 @@
+[
+  {
+    "testName": "Login Test_1",
+    "status": "FAIL",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/index.php",
+    "timestamp": "2025-10-25T07:26:57.696Z",
+    "failures": [
+      "URL check failed: Expected '/Admin1/index.php' in 'https://www.localnadaldev.in/nadalbgv/Admin/index.php'",
+      "Text check failed: Missing texts: [Clientele1]"
+    ]
+  }
+]

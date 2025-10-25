@@ -1,0 +1,11 @@
+{
+  "name": "puppeteer-test-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

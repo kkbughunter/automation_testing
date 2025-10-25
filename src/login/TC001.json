@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Login Test",
-      "url": "https://devnadal.in.net/Login.php",
+      "url": "https://www.localnadaldev.in/Login.php",
       "actions": [
         {
           "type": "type",
@@ -19,10 +19,19 @@
           "selector": "input[type='submit']"
         }
       ],
-      "expectedElement": "span.nav-profile-name",
-      "expectedText": "Logged in as Nadal Business Services",
-      "expectedUrlContains": "/Admin/index.php",
-      "screenshotPath": ""
+      "resultActions": [
+        {
+          "type": "click",
+          "selector": "a[href='#form-elements']"
+        },
+        {
+          "type": "delay",
+          "value": 1000
+        }
+      ],
+      "expectedElement": "#form-elements",
+      "expectedText": ["Clientele1", "Exit Client"],
+      "expectedUrlContains": "/Admin1/index.php"
     }
   ]
 }

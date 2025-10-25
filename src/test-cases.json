@@ -1,0 +1,43 @@
+{
+  "tests": [
+    {
+      "name": "Login Test",
+      "url": "https://devnadal.in.net/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "NadalVerify"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "NadalService@123"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        }
+      ],
+      "expectedElement": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "NadalVerify"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "NadalService@123"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        }
+      ],
+      "expectedText": "Dashboard",
+      "expectedUrlContains": "/Admin/index.php", 
+      "screenshotPath": "./screenshots/dashboard-screenshot.png"
+    }
+  ]
+}
