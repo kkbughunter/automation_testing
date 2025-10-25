@@ -1,42 +1,28 @@
 {
   "tests": [
     {
-      "name": "Login Test",
-      "url": "https://devnadal.in.net/Login.php",
+      "name": "Simple_Search",
+      "url": "https://in.search.yahoo.com/?fr2=inr",
       "actions": [
         {
           "type": "type",
-          "selector": "input[name='Username']",
-          "value": "NadalVerify"
+          "selector": "input[name='p']",
+          "value": "kkbughunter"
         },
         {
-          "type": "type",
-          "selector": "input[name='Password']",
-          "value": "NadalService@123"
+          "type": "key",
+          "key": "Enter"
         },
         {
-          "type": "click",
-          "selector": "input[type='submit']"
-        }
-      ],
-      "expectedElement": [
-        {
-          "type": "type",
-          "selector": "input[name='Username']",
-          "value": "NadalVerify"
-        },
-        {
-          "type": "type",
-          "selector": "input[name='Password']",
-          "value": "NadalService@123"
+          "type": "delay",
+          "value": 2000
         },
         {
           "type": "click",
-          "selector": "input[type='submit']"
+          "selector": "#web ol li:first-child h3 a"
         }
       ],
-      "expectedText": "Dashboard",
-      "expectedUrlContains": "/Admin/index.php", 
+      "expectedText": "kkbughunter", 
       "screenshotPath": "./screenshots/dashboard-screenshot.png"
     }
   ]
