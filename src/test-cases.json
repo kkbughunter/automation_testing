@@ -15,7 +15,7 @@
         },
         {
           "type": "delay",
-          "value": 2000
+          "duration": 2000
         },
         {
           "type": "click",
