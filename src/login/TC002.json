@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Login Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/CandidateBGVAadhaar_Id_VerificationForm.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad",
+      "actions": [
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "upload",
+          "selector": "input[id='addDocument']",
+          "filePath": "E:\\workspace\\automation_testing\\src\\login\\1png.png"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='aadhaar_number']",
+          "value": "123456789012"
+        },
+        {
+          "type": "click",
+          "selector": "button[onclick=\"submitForm('aadhaar_form','saveAndContinue');\"]"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedUrlContains": "https://www.localnadaldev.in/nadalbgv/CandidateBGVPassport_VerificationForm.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad"
+    }
+  ]
+}
