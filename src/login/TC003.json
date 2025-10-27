@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "Employment Form Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/CandidateBGVEmploymentFrom.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad",
+      "actions": [
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "type",
+          "selector": "input[name='fullName[]']",
+          "value": "Tech Company Ltd"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='empId[]']",
+          "value": "EMP001"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='from[]']",
+          "value": "2020-01-01"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='to[]']",
+          "value": "2023-12-31"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='address[]']",
+          "value": "123 Tech Street, Chennai"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='number[]']",
+          "value": "9876543210"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='city[]']",
+          "value": "Chennai"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='postCode[]']",
+          "value": "600001"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='job[]']",
+          "value": "Software Development"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='reason[]']",
+          "value": "Career Growth"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='designation[]']",
+          "value": "Software Engineer"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='salary[]']",
+          "value": "500000"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='hrName[]']",
+          "value": "John Doe"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='hrNumber[]']",
+          "value": "9876543211"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='superName[]']",
+          "value": "Jane Smith"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='superNumber[]']",
+          "value": "9876543212"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='superTitle[]']",
+          "value": "Team Lead"
+        },
+        {
+          "type": "multiUpload",
+          "selector": "input[name='documentpay_1[]']",
+          "filePaths": [
+            "E:\\workspace\\automation_testing\\src\\login\\1png.png",
+            "E:\\workspace\\automation_testing\\src\\login\\1png.png",
+            "E:\\workspace\\automation_testing\\src\\login\\1png.png"
+          ]
+        },
+        {
+          "type": "upload",
+          "selector": "input[name='document2[]']",
+          "filePath": "E:\\workspace\\automation_testing\\src\\login\\1png.png"
+        },
+        {
+          "type": "click",
+          "selector": "button[onclick=\"submitForm('employment_Form','saveAndContinue')\"]"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 3000
+        }
+      ],
+      "expectedUrlContains": "https://www.localnadaldev.in/nadalbgv/CandidateBGVGapForm.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad"
+    }
+  ]
+}
