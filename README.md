@@ -33,6 +33,11 @@ node index.js login/TC001.json
           "key": "Enter"
         },
         {
+          "type": "select",
+          "selector": "select[name='industry']",
+          "value": "Tyres"
+        },
+        {
           "type": "delay",
           "duration": 2000
         }

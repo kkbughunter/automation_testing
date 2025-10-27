@@ -17,21 +17,65 @@
         {
           "type": "click",
           "selector": "input[type='submit']"
-        }
-      ],
-      "resultActions": [
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
         {
           "type": "click",
           "selector": "a[href='#form-elements']"
         },
         {
+          "type": "click",
+          "selector": "a[href='AddNewCompany.php']"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='company_name']",
+          "value": "myCompany"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='industry']",
+          "value": "IT-Hardware & Networking"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='pan_number']",
+          "value": "KJJGF5720048"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='gst_number']",
+          "value": "237629497220479"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='short_name']",
+          "value": "my"
+        },
+        {
+          "type": "click",
+          "selector": "button[id='addCompany']"
+        },
+        {
           "type": "delay",
-          "value": 1000
+          "duration": 3000
+        },
+        {
+          "type": "clickInRow",
+          "rowText": "myCompany",
+          "buttonText": "User"
         }
       ],
-      "expectedElement": "#form-elements",
-      "expectedText": ["Clientele1", "Exit Client"],
-      "expectedUrlContains": "/Admin1/index.php"
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedUrlContains": "AddNewCompanyBranch.php"
     }
   ]
 }
