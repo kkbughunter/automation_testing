@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "name": "Resume Upload Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        }, {
+          "type": "delay",
+          "duration": 2000
+        },
+        
+        {
+          "type": "click",
+          "selector": "a[href='NewBGVRequest.php']"
+        },
+        {
+          "type": "multiUpload",
+          "selector": "input[id='resume']",
+          "filePaths": [
+            "E:/sample_file/resume/Resume1.pdf",
+            "E:/sample_file/resume/Resume1.pdf",
+            "E:/sample_file/resume/Resume1.pdf",
+            "E:/sample_file/resume/Resume1.pdf"
+          ]
+        },
+        {
+          "type": "click",
+          "selector": "button[id='uploadBtn']"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 3000
+        }
+      ],
+      "expectedUrlContains": "https://www.localnadaldev.in/nadalbgv/Client/MultipleCaseDetails.php?bulkid="
+    }
+  ]
+}
