@@ -1,12 +1,44 @@
 [
   {
     "testName": "Login Test_1",
-    "status": "FAIL",
+    "status": "PASS",
     "url": "https://www.localnadaldev.in/nadalbgv/Admin/index.php",
-    "timestamp": "2025-10-25T07:26:57.696Z",
+    "timestamp": "2025-10-27T10:29:09.859Z"
+  },
+  {
+    "testName": "Client List Results Filter Test_2",
+    "status": "FAIL",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+    "timestamp": "2025-10-27T10:29:16.675Z",
     "failures": [
-      "URL check failed: Expected '/Admin1/index.php' in 'https://www.localnadaldev.in/nadalbgv/Admin/index.php'",
-      "Text check failed: Missing texts: [Clientele1]"
+      "Text check failed: Missing texts: [5 Results]"
+    ]
+  },
+  {
+    "testName": "Client Search Test_3",
+    "status": "PASS",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+    "timestamp": "2025-10-27T10:29:23.658Z"
+  },
+  {
+    "testName": "Client Table View Test_4",
+    "status": "PASS",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+    "timestamp": "2025-10-27T10:29:29.048Z"
+  },
+  {
+    "testName": "Add Branch Button Test_5",
+    "status": "PASS",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/AddNewCompanyBranch.php?companyId=eb3d1e70-b1a1-11f0-abb3-e89a8f8197ad",
+    "timestamp": "2025-10-27T10:29:36.938Z"
+  },
+  {
+    "testName": "Branch Form Fill Test_6",
+    "status": "FAIL",
+    "url": "https://www.localnadaldev.in/nadalbgv/Admin/AddNewCompanyBranch.php?companyId=eb3d1e70-b1a1-11f0-abb3-e89a8f8197ad",
+    "timestamp": "2025-10-27T10:29:52.566Z",
+    "failures": [
+      "Text check failed: Missing texts: [Branch created]"
     ]
   }
 ]

@@ -1,0 +1,263 @@
+{
+  "tests": [
+    {
+      "name": "Resume Upload and Submit Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='NewBGVRequest.php']"
+        },
+        {
+          "type": "multiUpload",
+          "selector": "input[id='resume']",
+          "filePaths": [
+            "E:/sample_file/resume/Resume1.pdf",
+            "E:/sample_file/resume/Resume1.pdf"
+          ]
+        },
+        {
+          "type": "click",
+          "selector": "button[id='uploadBtn']"
+        },
+        {
+          "type": "delay",
+          "duration": 3000
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(2) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(2) input",
+          "value": "John"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(3) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(3) input",
+          "value": "Doe"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(4) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(4) input",
+          "value": "9876543210"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(5) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(5) input",
+          "value": "karthikeyan2@mailinator.com"
+        },
+        {
+          "type": "select",
+          "selector": "#ViewTableBody tr:first-child td:nth-child(6) select",
+          "value": "yes"
+        },
+        {
+          "type": "click",
+          "selector": "#ViewTableBody tr:first-child .service-link"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "uncheckAll",
+          "selector": ".modal.show input[name='services[]']:checked"
+        },
+        {
+          "type": "click",
+          "selector": ".modal.show input[id^='AV_']"
+        },
+        {
+          "type": "click",
+          "selector": ".modal.show .service-Btn"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(2) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(2) input",
+          "value": "Jane"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(3) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(3) input",
+          "value": "Smith"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(4) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(4) input",
+          "value": "9123456789"
+        },
+        {
+          "type": "clear",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(5) input"
+        },
+        {
+          "type": "type",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(5) input",
+          "value": "karthikeyan1@mailinator.com"
+        },
+        {
+          "type": "select",
+          "selector": "#ViewTableBody tr:nth-child(2) td:nth-child(6) select",
+          "value": "no"
+        },
+        {
+          "type": "click",
+          "selector": "#ViewTableBody tr:nth-child(2) .service-link"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "uncheckAll",
+          "selector": ".modal.show input[name='services[]']:checked"
+        },
+        {
+          "type": "click",
+          "selector": ".modal.show input[id^='AV_']"
+        },
+        {
+          "type": "click",
+          "selector": ".modal.show .service-Btn"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "button[id='submitAllBtn']"
+        },
+        {
+          "type": "delay",
+          "duration": 4000
+        }
+      ],
+      "expectedUrlContains": "/Client/index.php"
+    },
+    {
+      "name": "Resend Email Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='BulkUploadHistory.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "tbody tr:first-child .btn-primary"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "acceptAlert"
+        },
+        {
+          "type": "click",
+          "selector": "#ViewTableBody tr:first-child .btn-resend"
+        },
+        {
+          "type": "delay",
+          "duration": 3000
+        }
+      ],
+      "expectedUrlContains": "/Client/BGVRequestHistory.php"
+    },
+    {
+      "name": "Resend Email Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedUrlContains": "/Client/BGVRequestHistory.php"
+    }
+  ]
+}

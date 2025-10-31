@@ -1,0 +1,369 @@
+{
+  "tests": [
+    {
+      "name": "Open Orders - Navigation Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    },
+    {
+      "name": "Open Orders - Search Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "type",
+          "selector": "#ViewAllSearch",
+          "value": "John"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    },
+    {
+      "name": "Open Orders - Pagination Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "select",
+          "selector": "#ViewallResults",
+          "value": "5"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    },
+    {
+      "name": "Open Orders - View Case Details Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "#ViewallTableBody tr:first-child td:first-child a"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedUrlContains": "/Client/ViewOrderInfoForClient.php"
+    },
+    {
+      "name": "Open Orders - Extend Link with OK Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "#ViewallTableBody tr:first-child .extend-epdt-btn"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "type",
+          "selector": "#extended_time",
+          "value": "5"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": ".swal2-confirm"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    },
+    {
+      "name": "Open Orders - Extend Link with Cancel Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "#ViewallTableBody tr:first-child .extend-epdt-btn"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "click",
+          "selector": ".swal2-cancel"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    },
+    {
+      "name": "Open Orders - Cancel Order Test",
+      "url": "https://www.localnadaldev.in/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "karthikeyanuser@mailinator.com"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "1234567890"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "click",
+          "selector": "a[href='#action']"
+        },
+        {
+          "type": "delay",
+          "duration": 500
+        },
+        {
+          "type": "click",
+          "selector": "a[href='FetchViewallForUser.php']"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        },
+        {
+          "type": "acceptAlert"
+        },
+        {
+          "type": "click",
+          "selector": "#ViewallTableBody tr:first-child .btn-danger"
+        },
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedUrlContains": "/Client/FetchViewallForUser.php"
+    }
+  ]
+}

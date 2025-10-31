@@ -1,0 +1,91 @@
+{
+  "tests": [
+    {
+      "name": "Login Test",
+      "description": "Verify user can login with valid credentials",
+      "url": "https://devnadal.in.net/Login.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[name='Username']",
+          "value": "NadalVerify"
+        },
+        {
+          "type": "type",
+          "selector": "input[name='Password']",
+          "value": "NadalService@123"
+        },
+        {
+          "type": "click",
+          "selector": "input[type='submit']"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "click",
+          "selector": "a[href='#form-elements']"
+        },
+        {
+          "type": "delay",
+          "value": 1000
+        }
+      ],
+      "expectedElement": "#form-elements",
+      "expectedText": ["Clientele", "Exit Client"],
+      "expectedUrlContains": "/Admin/index.php"
+    },
+    {
+      "name": "Client Registration Form Test",
+      "description": "Verify new client can be registered and searched successfully",
+      "url": "https://devnadal.in.net/nadalbgv/Admin/AddNewCompany.php",
+      "actions": [
+        {
+          "type": ["type", "suffix", "string", 5],
+          "selector": "input[id='Company Name']",
+          "value": " Pvt Ltd",
+          "storeAs": "companyName"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='industry']",
+          "value": "IT-Software/Software Services"
+        },
+        {
+          "type": ["type", "suffix", "number", 7],
+          "selector": "input[id='pan']"
+        },
+        {
+          "type": ["type", "suffix", "number", 10],
+          "selector": "input[id='gst_number']"
+        },
+        {
+          "type": ["type", "prefix", "string", 3],
+          "selector": "input[id='short_name']",
+          "value": "Tech"
+        },
+        {
+          "type": "delay",
+          "duration": 1000
+        },
+        {
+          "type": "click",
+          "selector": "button[id='addCompany']"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 3000
+        },
+        {
+          "type": "type",
+          "selector": "input[id='searchInput']",
+          "value": "$companyName"
+        }
+      ],
+      "expectedText": ["$companyName"],
+      "expectedElement": "tbody[id='ClienteleTbody']",
+      "expectedUrlContains": "/Admin/FetchClienttele.php"
+    }
+  ]
+}

@@ -17,56 +17,30 @@
         {
           "type": "click",
           "selector": "input[type='submit']"
-        },
-        {
-          "type": "delay",
-          "duration": 1000
-        },
+        }
+      ],
+      "resultActions": [
         {
           "type": "click",
           "selector": "a[href='#form-elements']"
         },
         {
-          "type": "click",
-          "selector": "a[href='AddNewCompany.php']"
-        },
-        {
-          "type": "type",
-          "selector": "input[name='company_name']",
-          "value": "myCompany"
-        },
+          "type": "delay",
+          "value": 1000
+        }
+      ],
+      "expectedElement": "#form-elements",
+      "expectedText": ["Clientele", "Exit Client"],
+      "expectedUrlContains": "/Admin/index.php"
+    },
+    {
+      "name": "Client List Results Filter Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+      "actions": [
         {
           "type": "select",
-          "selector": "select[name='industry']",
-          "value": "IT-Hardware & Networking"
-        },
-        {
-          "type": "type",
-          "selector": "input[name='pan_number']",
-          "value": "KJJGF5720048"
-        },
-        {
-          "type": "type",
-          "selector": "input[id='gst_number']",
-          "value": "237629497220479"
-        },
-        {
-          "type": "type",
-          "selector": "input[id='short_name']",
-          "value": "my"
-        },
-        {
-          "type": "click",
-          "selector": "button[id='addCompany']"
-        },
-        {
-          "type": "delay",
-          "duration": 3000
-        },
-        {
-          "type": "clickInRow",
-          "rowText": "myCompany",
-          "buttonText": "User"
+          "selector": "select[id='ClientResults']",
+          "value": "6"
         }
       ],
       "resultActions": [
@@ -75,7 +49,127 @@
           "duration": 1000
         }
       ],
-      "expectedUrlContains": "AddNewCompanyBranch.php"
+      "expectedText": ["5 Results"],
+      "expectedElement": "#ClientRes",
+      "expectedUrlContains": "/Admin/FetchClienttele.php"
+    },
+    {
+      "name": "Client Search Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[id='searchInput']",
+          "value": "ABC"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 1000
+        }
+      ],
+      "expectedText": ["ABC"],
+      "expectedElement": "body",
+      "expectedUrlContains": "/Admin/FetchClienttele.php"
+    },
+    {
+      "name": "Client Table View Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+      "actions": [
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedText": ["ABC Technologies Pvt Ltd", "ZoHo", "SR Technologies"],
+      "expectedElement": "#ClienteleTbody",
+      "expectedUrlContains": "/Admin/FetchClienttele.php"
+    },
+    {
+      "name": "Add Branch Button Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/Admin/FetchClienttele.php",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "button[onclick*='AddNewCompanyBranch.php?companyId=eb3d1e70-b1a1-11f0-abb3-e89a8f8197ad']"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 2000
+        }
+      ],
+      "expectedElement": "body",
+      "expectedUrlContains": "/Admin/AddNewCompanyBranch.php"
+    },
+    {
+      "name": "Branch Form Fill Test",
+      "url": "https://www.localnadaldev.in/nadalbgv/Admin/AddNewCompanyBranch.php?companyId=eb3d1e70-b1a1-11f0-abb3-e89a8f8197ad",
+      "actions": [
+        {
+          "type": "type",
+          "selector": "input[id='branch_name']",
+          "value": "ABC Branch"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='selectCountry']",
+          "value": "India"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='selectState']",
+          "value": "Tamil Nadu"
+        },
+        {
+          "type": "select",
+          "selector": "select[name='city']",
+          "value": "Chennai"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='address1']",
+          "value": "123 Main Street"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='address2']",
+          "value": "Suite 100"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='pincode']",
+          "value": "560001"
+        },
+        {
+          "type": "type",
+          "selector": "input[id='Branch_ShortName']",
+          "value": "Main"
+        },
+        {
+          "type": "click",
+          "selector": "input[id='AV']"
+        },
+        {
+          "type": "click",
+          "selector": "input[id='EMPV']"
+        },
+        {
+          "type": "click",
+          "selector": "button[id='addCompany']"
+        }
+      ],
+      "resultActions": [
+        {
+          "type": "delay",
+          "duration": 3000
+        }
+      ],
+      "expectedText": ["Branch created"],
+      "expectedElement": "body",
+      "expectedUrlContains": "/Admin/AddNewCompanyBranch.php"
     }
   ]
 }

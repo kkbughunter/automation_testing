@@ -1,0 +1,11 @@
+[
+  {
+    "testName": "Employment Form Test_1",
+    "status": "FAIL",
+    "url": "https://www.localnadaldev.in/nadalbgv/CandidateBGVEmploymentFrom.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad",
+    "timestamp": "2025-10-27T05:35:27.094Z",
+    "failures": [
+      "URL check failed: Expected 'https://www.localnadaldev.in/nadalbgv/CandidateBGVGapForm.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad' in 'https://www.localnadaldev.in/nadalbgv/CandidateBGVEmploymentFrom.php?LinkID=41b47b3d-b2f1-11f0-be8c-e89a8f8197ad'"
+    ]
+  }
+]

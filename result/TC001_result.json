@@ -1,8 +1,0 @@
-[
-  {
-    "testName": "Login Test_1",
-    "status": "ERROR",
-    "error": "No element found for selector: input[type='submit']",
-    "timestamp": "2025-10-25T07:00:54.018Z"
-  }
-]
